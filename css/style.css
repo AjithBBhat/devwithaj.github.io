@@ -137,6 +137,7 @@ h3 {
 /* header */
 
 header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1em;
