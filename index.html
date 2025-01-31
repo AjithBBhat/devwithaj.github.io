@@ -1,232 +1,1197 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ajith Portfolio Website</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
-      integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc="
-      crossorigin="anonymous"
-    />
-    <!-- Update these with your own fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap"
-      rel="stylesheet"
-    />
+<html lang="en" class="scroll-smooth">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="AI-generated website">
+      <meta name="theme-color" content="#ffffff">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="robots" content="index, follow">
+      
+      <!-- Performance optimization: Preload critical resources -->
+      <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+      <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" as="style">
+      
+      <!-- {headerScripts} -->
 
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-        <img src="img/DevWithAj.svg" alt="" />
-      </div>
-      <button class="nav-toggle" aria-label="toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-          <li class="nav__item">
-            <a href="#services" class="nav__link">My Services</a>
-          </li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">About me</a>
-          </li>
-          <li class="nav__item">
-            <a href="#work" class="nav__link">My Work</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+      <!-- Core CSS -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+             colors: {
+                primary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                secondary: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+                accent: {
+                  50: '#f8f8f8',
+                  100: '#e8e8e8',
+                  200: '#d3d3d3',
+                  300: '#a3a3a3',
+                  400: '#737373',
+                  500: '#525252',
+                  600: '#404040',
+                  700: '#262626',
+                  800: '#171717',
+                  900: '#0a0a0a',
+                  950: '#030303',
+                },
+              },
+              fontFamily: {
+                sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                heading: ['Montserrat', 'Inter', 'system-ui', 'sans-serif'],
+              },
+              spacing: {
+                '18': '4.5rem',
+                '22': '5.5rem',
+                '30': '7.5rem',
+              },
+              maxWidth: {
+                '8xl': '88rem',
+                '9xl': '96rem',
+              },
+              animation: {
+                'fade-in': 'fadeIn 0.5s ease-in',
+                'fade-out': 'fadeOut 0.5s ease-out',
+                'slide-up': 'slideUp 0.5s ease-out',
+                'slide-down': 'slideDown 0.5s ease-out',
+                'slide-left': 'slideLeft 0.5s ease-out',
+                'slide-right': 'slideRight 0.5s ease-out',
+                'scale-in': 'scaleIn 0.5s ease-out',
+                'scale-out': 'scaleOut 0.5s ease-out',
+                'spin-slow': 'spin 3s linear infinite',
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'bounce-slow': 'bounce 3s infinite',
+                'float': 'float 3s ease-in-out infinite',
+              },
+              keyframes: {
+                fadeIn: {
+                  '0%': { opacity: '0' },
+                  '100%': { opacity: '1' },
+                },
+                fadeOut: {
+                  '0%': { opacity: '1' },
+                  '100%': { opacity: '0' },
+                },
+                slideUp: {
+                  '0%': { transform: 'translateY(20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideDown: {
+                  '0%': { transform: 'translateY(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateY(0)', opacity: '1' },
+                },
+                slideLeft: {
+                  '0%': { transform: 'translateX(20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                slideRight: {
+                  '0%': { transform: 'translateX(-20px)', opacity: '0' },
+                  '100%': { transform: 'translateX(0)', opacity: '1' },
+                },
+                scaleIn: {
+                  '0%': { transform: 'scale(0.9)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                scaleOut: {
+                  '0%': { transform: 'scale(1.1)', opacity: '0' },
+                  '100%': { transform: 'scale(1)', opacity: '1' },
+                },
+                float: {
+                  '0%, 100%': { transform: 'translateY(0)' },
+                  '50%': { transform: 'translateY(-10px)' },
+                },
+              },
+              aspectRatio: {
+                'portrait': '3/4',
+                'landscape': '4/3',
+                'ultrawide': '21/9',
+              },
+            },
+          },
+          variants: {
+            extend: {
+              opacity: ['disabled'],
+              cursor: ['disabled'],
+              backgroundColor: ['active', 'disabled'],
+              textColor: ['active', 'disabled'],
+            },
+          },
+        }
+      </script>
 
-    <!-- Introduction -->
-    <section class="intro" id="home">
-      <h1 class="section__title section__title--intro">
-        Hi, I am <strong>Ajith Bhat</strong>
-      </h1>
-      <p class="section__subtitle section__subtitle--intro">Web developer</p>
-      <img
-        src="img/ajith_profile_pic.jpg"
-        alt="a picture of Jane Smith smiling "
-        class="intro__img"
-      />
+      <!-- Utilities and Components -->
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.3/cdn.min.js"></script>
+      <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.45.1/apexcharts.min.js"></script>
+      
+      <!-- Optimized Font Loading -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+      
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+      <!-- Base Styles -->
+      <style>
+
+      * {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Webkit browsers like Chrome, Safari, newer Edge */
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 0px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: #666;
+        }
+
+        /* Remove tap highlight on mobile */
+        * {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Improve text rendering */
+        body {
+          text-rendering: optimizeLegibility;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Focus outline styles */
+        :focus-visible {
+          outline: 2px solid currentColor;
+          outline-offset: 2px;
+        }
+
+        /* Print styles */
+        @media print {
+          .no-print {
+            display: none !important;
+          }
+          
+          a[href]:after {
+            content: " (" attr(href) ")";
+          }
+        }
+      </style>
+
+      <!-- Enhanced Image Handler -->
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  const tempImage = new Image();
+                  tempImage.onload = () => {
+                    img.src = img.dataset.src;
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                  };
+                  tempImage.src = img.dataset.src;
+                  img.removeAttribute('data-src');
+                  observer.unobserve(img);
+                }
+              }
+            });
+          }, {
+            rootMargin: '50px 0px',
+            threshold: 0.01
+          });
+
+          const loadImage = (img) => {
+            if ('loading' in HTMLImageElement.prototype) {
+              img.loading = 'lazy';
+            }
+            
+            img.classList.add('transition-opacity', 'duration-300', 'opacity-0');
+            
+            img.onerror = () => {
+              const width = img.getAttribute('width') || img.clientWidth || 300;
+              const height = img.getAttribute('height') || img.clientHeight || 200;
+              img.src = `https://placehold.co/${width}x${height}/DEDEDE/555555?text=Image+Unavailable`;
+              img.alt = 'Image unavailable';
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100', 'error-image');
+            };
+
+            if (img.dataset.src) {
+              imageObserver.observe(img);
+            } else {
+              img.classList.remove('opacity-0');
+              img.classList.add('opacity-100');
+            }
+          };
+
+          document.querySelectorAll('img[data-src], img:not([data-src])').forEach(loadImage);
+
+          // Watch for dynamically added images
+          new MutationObserver((mutations) => {
+            mutations.forEach(mutation => {
+              mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) {
+                  if (node.tagName === 'IMG') {
+                    loadImage(node);
+                  }
+                  node.querySelectorAll('img').forEach(loadImage);
+                }
+              });
+            });
+          }).observe(document.body, {
+            childList: true,
+            subtree: true
+          });
+        });
+
+        // Performance monitoring
+        if ('performance' in window && 'PerformanceObserver' in window) {
+          // Create performance observer
+          const observer = new PerformanceObserver((list) => {
+            const entries = list.getEntries();
+            entries.forEach((entry) => {
+              if (entry.entryType === 'largest-contentful-paint') {
+                // console.log(`LCP: ${entry.startTime}ms`);
+              }
+              if (entry.entryType === 'first-input') {
+                // console.log(`FID: ${entry.processingStart - entry.startTime}ms`);
+              }
+              if (entry.entryType === 'layout-shift') {
+                // console.log(`CLS: ${entry.value}`);
+              }
+            });
+          });
+
+          // Observe performance metrics
+          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+          // Log basic performance metrics
+          window.addEventListener('load', () => {
+            const timing = performance.getEntriesByType('navigation')[0];
+            console.log({
+              'DNS Lookup': timing.domainLookupEnd - timing.domainLookupStart,
+              'TCP Connection': timing.connectEnd - timing.connectStart,
+              'DOM Content Loaded': timing.domContentLoadedEventEnd - timing.navigationStart,
+              'Page Load': timing.loadEventEnd - timing.navigationStart
+            });
+          });
+        }
+
+        // Handle offline/online status
+        window.addEventListener('online', () => {
+          document.body.classList.remove('offline');
+          console.log('Connection restored');
+        });
+        
+        window.addEventListener('offline', () => {
+          document.body.classList.add('offline');
+          console.log('Connection lost');
+        });
+      </script>
+   </head>
+   <body class="antialiased text-gray-800 min-h-screen flex flex-col">
+      <!-- Skip to main content link for accessibility -->
+      <a href="#main-content" 
+         class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-white focus:text-black">
+         Skip to main content
+      </a>
+
+      <!-- Header -->
+      <header class="relative z-50 bg-white dark:bg-gray-900">
+        <!-- Header content goes here -->
+      </header>
+
+      <!-- Main content area -->
+      <main id="main-content" class="flex-1 relative ">
+        <!-- Content will be injected here -->
+      </main>
+
+      <!-- {bodyScripts} -->
+
+   </body>
+</html><element id="1e29afb0-d985-42c8-9ad9-e74b8141181f" data-section-id="1e29afb0-d985-42c8-9ad9-e74b8141181f">
+
+
+                <htmlcode id="el-7ebtdmq1">
+<nav id="root" class="fixed w-full z-50 bg-neutral-900/90 backdrop-blur-sm border-b border-neutral-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+            <div class="flex-shrink-0">
+                <a href="#" class="text-white font-bold text-xl">AJ</a>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:block">
+                <div class="ml-10 flex items-center space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Experience</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Skills</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Projects</a>
+                    <a href="#certifications" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Certifications</a>
+                    <a href="#education" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Education</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button type="button" id="mobile-menu-button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-neutral-800 focus:outline-none">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-neutral-900 border-b border-neutral-800">
+            <a href="#about" class="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">About</a>
+            <a href="#experience" class="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">Experience</a>
+            <a href="#skills" class="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">Skills</a>
+            <a href="#projects" class="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">Projects</a>
+            <a href="#certifications" class="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">Certifications</a>
+            <a href="#education" class="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">Education</a>
+            <a href="#contact" class="text-gray-300 hover:text-white block px-3 py-2 text-base font-medium">Contact</a>
+        </div>
+    </div>
+</nav>
+</htmlcode>
+              </element><element id="50cd8255-b9f6-42dd-84e4-a635a38fcef6" data-section-id="50cd8255-b9f6-42dd-84e4-a635a38fcef6">
+
+<htmlCode>
+<div id="root">
+    <section id="hero" class="min-h-screen bg-neutral-900 flex items-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6 animate__animated animate__fadeInLeft">
+                    <h1 class="text-4xl md:text-6xl font-bold text-white">
+                        Hi, I'm <span class="text-blue-500">Ajith B</span>
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-gray-400">
+                        Backend Developer specializing in scalable services and APIs
+                    </h2>
+                    <p class="text-gray-300 text-lg">
+                        Experienced in JavaScript, Node.js, Golang, and AWS technologies. Passionate about building efficient and secure backend solutions.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
+                            Contact Me
+                        </a>
+                        <a href="#experience" class="border border-gray-500 hover:border-white text-gray-300 hover:text-white px-6 py-3 rounded-md font-medium transition-colors">
+                            View Work
+                        </a>
+                    </div>
+                    <div class="flex space-x-6 pt-4">
+                        <a href="mailto:ajithbbhat@gmail.com" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ajith-b-0b9b70156" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="https://ajithbbhat.github.io/devwithaj.github.io/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block animate__animated animate__fadeInRight">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-blue-500 rounded-full opacity-20 blur-3xl"></div>
+                        <div class="relative bg-neutral-800 p-8 rounded-lg border border-neutral-700">
+                            <div class="space-y-4">
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <pre class="text-gray-300 font-mono text-sm">
+<code>{
+    "name": "Ajith B",
+    "role": "Backend Developer",
+    "location": "Bengaluru",
+    "experience": "4+ years",
+    "skills": [
+        "JavaScript",
+        "Node.js",
+        "Golang",
+        "AWS"
+    ]
+}</code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+</div>
 
-    <!-- My services -->
-    <section class="my-services" id="services">
-      <h2 class="section__title section__title--services">What I do</h2>
-      <div class="services">
-        <div class="service">
-          <h3>Databases and servers</h3>
-          <p>
-            As a back-end developer, I have been trained and have work
-            experience in designing database on MongoDB and deploying servers
-            using Express.js frameworks
-          </p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</htmlCode></element><element id="150f8074-ecd4-4330-a430-20ab750400ff" data-section-id="150f8074-ecd4-4330-a430-20ab750400ff">
+
+<htmlCode>
+<div id="root">
+    <section id="about" class="py-20 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About Me</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 animate__animated animate__fadeInLeft">
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Experienced Backend Developer with a strong background in designing, developing, and deploying scalable backend services and APIs. Proficient in JavaScript, Node.js, Golang, NestJs, MongoDB, PostgreSQL, and AWS technologies.
+                    </p>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Adept at optimizing backend processes for enhanced efficiency and performance, and committed to maintaining high standards of security and data integrity.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="border border-neutral-700 p-4 rounded-lg">
+                            <h3 class="text-blue-500 font-semibold mb-2">Location</h3>
+                            <p class="text-gray-300">Bengaluru, Karnataka</p>
+                        </div>
+                        <div class="border border-neutral-700 p-4 rounded-lg">
+                            <h3 class="text-blue-500 font-semibold mb-2">Experience</h3>
+                            <p class="text-gray-300">4+ Years</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-8 animate__animated animate__fadeInRight">
+                    <h3 class="text-2xl font-semibold text-white mb-6">Interests & Hobbies</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-neutral-700 p-6 rounded-lg">
+                            <h4 class="text-blue-500 font-semibold mb-3">Music</h4>
+                            <p class="text-gray-300">Percussion Instruments (Tabala, Cajon, Bongos, Djembe)</p>
+                        </div>
+                        <div class="bg-neutral-700 p-6 rounded-lg">
+                            <h4 class="text-blue-500 font-semibold mb-3">Production</h4>
+                            <p class="text-gray-300">EDM music R&D, FL Studio, Adobe Audition</p>
+                        </div>
+                        <div class="bg-neutral-700 p-6 rounded-lg">
+                            <h4 class="text-blue-500 font-semibold mb-3">Sports</h4>
+                            <p class="text-gray-300">Cricket, Soccer, Badminton</p>
+                        </div>
+                        <div class="bg-neutral-700 p-6 rounded-lg">
+                            <h4 class="text-blue-500 font-semibold mb-3">Travel</h4>
+                            <p class="text-gray-300">Exploring new places and cultures</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- / service -->
-
-        <div class="service">
-          <h3>Application Program Interface (API)</h3>
-          <p>
-            APIs are an accessible way to extract and share data within and
-            across organizations,REST apis are bulit using again by express.js
-            and all respective testings are done by Postman application.
-          </p>
-        </div>
-        <!-- / service -->
-
-        <div class="service">
-          <h3>Accessibility and security clearance</h3>
-          <p>
-            Express-validator or XSS-filters, Bcrypt, crypto, hpp,
-            globalErrorHandler, mongoSanitize, helmet, rateLimit, morgan and
-            other respective required js middlewares or packages used to secure
-            the user data.
-          </p>
-        </div>
-        <!-- / service -->
-      </div>
-      <!-- / services -->
-
-      <a href="#work" class="btn">My Work</a>
     </section>
+</div>
+</htmlCode></element><element id="f895dc2c-04aa-4183-94bd-1d675156a880" data-section-id="f895dc2c-04aa-4183-94bd-1d675156a880">
 
-    <!-- About me -->
-    <section class="about-me" id="about">
-      <h2 class="section__title section__title--about">Who I am</h2>
-      <p class="section__subtitle section__subtitle--about">
-        Web developer from Bangalore
-      </p>
+<htmlCode>
+<div id="root">
+    <section id="experience" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Professional Experience</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
 
-      <div class="about-me__body">
-        <p>
-          Motivated and eager backend web developer with 1+ year of experience
-          in developing and deploying web applications. Skilled in Java and
-          JavaScript programming languages, and proficient in server-side
-          scripting and REST API development. Experienced in working with
-          databases such as MySQL and noSQL(MongoDB). Committed to delivering
-          high-quality and scalable solutions that meet project requirements and
-          exceed expectations.Around 2.4 years of Professional experience in IT
-          industry.
-        </p>
+            <div class="space-y-12">
+                <!-- MoolFinance -->
+                <div class="bg-neutral-800 rounded-lg p-8 animate__animated animate__fadeInUp">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Backend Developer</h3>
+                            <p class="text-blue-500">MoolFinance.com, Bengaluru</p>
+                        </div>
+                        <p class="text-gray-400 mt-2 md:mt-0">JAN 2024 — JAN 2025</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-neutral-700/50 p-4 rounded">
+                            <h4 class="text-white font-semibold mb-2">Key Projects</h4>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li>MOOL-JANN (ITR filing)</li>
+                                <li>MOOL-VETAN (salary payroll system)</li>
+                                <li>Salary Personalisation AI Tool</li>
+                            </ul>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Created a Salary Personalization AI Tool using Gemini API for automation
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Implemented Redis and NATS gateways for messaging and caching
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Containerized applications with Docker and deployed on AWS EC2 instances
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Happiest Minds -->
+                <div class="bg-neutral-800 rounded-lg p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Web Developer</h3>
+                            <p class="text-blue-500">Happiest Minds Technologies Limited, Bengaluru</p>
+                        </div>
+                        <p class="text-gray-400 mt-2 md:mt-0">FEB 2022 — DEC 2023</p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-neutral-700/50 p-4 rounded">
+                            <h4 class="text-white font-semibold mb-2">Projects</h4>
+                            <ul class="list-disc list-inside text-gray-300 space-y-2">
+                                <li>Skan Cohort management</li>
+                                <li>Ecommerce platform</li>
+                                <li>CMS and Scheduler based web app</li>
+                            </ul>
+                        </div>
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Developed and maintained web applications using the MERN stack
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Implemented server-side logic using Node.js and Express.js
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Amazon -->
+                <div class="bg-neutral-800 rounded-lg p-8 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Prod Compliance Sr. Associate</h3>
+                            <p class="text-blue-500">Amazon</p>
+                        </div>
+                        <p class="text-gray-400 mt-2 md:mt-0">MAY 2020 — JAN 2022</p>
+                    </div>
+                    <div class="space-y-4">
+                        <ul class="space-y-2 text-gray-300">
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Worked with AWS tools including S3 bucket for data management
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-5 h-5 text-blue-500 mt-1 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                Managed data using tools like Rosebread and Paragon
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="722ce850-2b3b-4314-98a5-d2c53aaa5eb3" data-section-id="722ce850-2b3b-4314-98a5-d2c53aaa5eb3">
+
+<htmlCode>
+<div id="root">
+    <section id="skills" class="py-20 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Technical Skills</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Languages -->
+                <div class="bg-neutral-900 rounded-lg p-6 animate__animated animate__fadeInLeft">
+                    <h3 class="text-xl font-semibold text-white mb-6 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                        Languages
+                    </h3>
+                    <div class="space-y-4">
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-300">JavaScript (ES6+)</span>
+                                <span class="text-blue-500">95%</span>
+                            </div>
+                            <div class="w-full bg-neutral-700 rounded-full h-2">
+                                <div class="bg-blue-500 rounded-full h-2" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-300">TypeScript</span>
+                                <span class="text-blue-500">90%</span>
+                            </div>
+                            <div class="w-full bg-neutral-700 rounded-full h-2">
+                                <div class="bg-blue-500 rounded-full h-2" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="relative pt-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-gray-300">Golang</span>
+                                <span class="text-blue-500">85%</span>
+                            </div>
+                            <div class="w-full bg-neutral-700 rounded-full h-2">
+                                <div class="bg-blue-500 rounded-full h-2" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend -->
+                <div class="bg-neutral-900 rounded-lg p-6 animate__animated animate__fadeInRight">
+                    <h3 class="text-xl font-semibold text-white mb-6 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        </svg>
+                        Frontend Technologies
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">React.js</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">Next.js</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">React-Bootstrap</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">Ant Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-neutral-900 rounded-lg p-6 animate__animated animate__fadeInLeft" style="animation-delay: 0.2s">
+                    <h3 class="text-xl font-semibold text-white mb-6 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
+                        </svg>
+                        Backend Technologies
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">Node.js</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">Express.js</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">NestJs</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">MERN Stack</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud & Tools -->
+                <div class="bg-neutral-900 rounded-lg p-6 animate__animated animate__fadeInRight" style="animation-delay: 0.2s">
+                    <h3 class="text-xl font-semibold text-white mb-6 flex items-center">
+                        <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                        </svg>
+                        Cloud Services & Tools
+                    </h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">AWS EC2</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">AWS S3</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">Docker</span>
+                        </div>
+                        <div class="bg-neutral-800 p-3 rounded-lg">
+                            <span class="text-gray-300">Git/GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="6b6e5b2d-513e-4025-ad07-e015287d92e1" data-section-id="6b6e5b2d-513e-4025-ad07-e015287d92e1">
+
+<htmlCode>
+<div id="root">
+    <section id="projects" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- MOOL-JANN Project -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">MOOL-JANN</h3>
+                        <p class="text-gray-300 mb-4">ITR filing system with automated processing and expert guidance</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>MERN Stack Implementation</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>Automated Tax Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOOL-VETAN Project -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">MOOL-VETAN</h3>
+                        <p class="text-gray-300 mb-4">Comprehensive salary payroll system with tax optimization</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>Microservice Architecture</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>Redis & NATS Integration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Salary Personalization AI Tool -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Salary Personalization AI</h3>
+                        <p class="text-gray-300 mb-4">AI-powered salary structure optimization tool</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>Gemini API Integration</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>ML-based Recommendations</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skan Cohort Management -->
+                <div class="bg-neutral-800 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.6s">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-3">Skan Cohort Management</h3>
+                        <p class="text-gray-300 mb-4">Enterprise-level cohort management system</p>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>React.js Frontend</span>
+                            </div>
+                            <div class="flex items-center text-gray-400">
+                                <svg class="w-5 h-5 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                </svg>
+                                <span>Node.js Backend</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="text-center mt-12">
+                <a href="https://ajithbbhat.github.io/devwithaj.github.io/#work" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-6 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded-md transition-colors duration-300">
+                    <span>View All Projects</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div> -->
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="4e48a09d-c3d0-4d5e-8a73-28ded4fdccbf" data-section-id="4e48a09d-c3d0-4d5e-8a73-28ded4fdccbf">
+
+<htmlCode>
+<div id="root">
+    <section id="certifications" class="py-20 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Certifications</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-neutral-900 rounded-lg p-6 hover:transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp">
+                    <div class="border-b border-neutral-700 pb-4 mb-4">
+                        <h3 class="text-xl font-semibold text-white">AWS Cloud Practitioner</h3>
+                        <p class="text-gray-400 mt-2">Amazon Web Services</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-500">Verified</span>
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-900 rounded-lg p-6 hover:transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.2s">
+                    <div class="border-b border-neutral-700 pb-4 mb-4">
+                        <h3 class="text-xl font-semibold text-white">Node.js Advanced Concepts</h3>
+                        <p class="text-gray-400 mt-2">Udemy</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-500">Verified</span>
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-900 rounded-lg p-6 hover:transform hover:scale-105 transition-transform duration-300 animate__animated animate__fadeInUp" style="animation-delay: 0.4s">
+                    <div class="border-b border-neutral-700 pb-4 mb-4">
+                        <h3 class="text-xl font-semibold text-white">React Developer</h3>
+                        <p class="text-gray-400 mt-2">Meta</p>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-blue-500">Verified</span>
+                        <svg class="w-6 h-6 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="text-center mt-12">
+                <a href="https://ajithbbhat.github.io/devwithaj.github.io/certifcate.html" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-md transition-colors duration-300 animate__animated animate__fadeInUp">
+                    <span>View All Certificates</span>
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div> -->
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="8cf74629-465d-448d-bc40-8248f00a3310" data-section-id="8cf74629-465d-448d-bc40-8248f00a3310">
+
+<htmlCode>
+<div id="root">
+    <section id="education" class="py-20 bg-neutral-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Education</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="space-y-8">
+                <!-- BE Degree -->
+                <div class="bg-neutral-800 rounded-lg p-8 animate__animated animate__fadeInLeft">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Bachelor of Engineering (ISE)</h3>
+                            <p class="text-blue-500 text-lg">Don Bosco Institute Of Technology</p>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="bg-blue-500/20 text-blue-400 px-4 py-1 rounded-full">6.87 CGPA</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">VTU (Visvesvaraya Technological University) - 2020</p>
+                </div>
+
+                <!-- PUC -->
+                <div class="bg-neutral-800 rounded-lg p-8 animate__animated animate__fadeInRight">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Pre-University Course (PUC)</h3>
+                            <p class="text-blue-500 text-lg">SBMJC (Jain College)</p>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="bg-blue-500/20 text-blue-400 px-4 py-1 rounded-full">80%</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">DPUE, Karnataka - 2016</p>
+                </div>
+
+                <!-- SSLC -->
+                <div class="bg-neutral-800 rounded-lg p-8 animate__animated animate__fadeInLeft">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">SSLC (Secondary School)</h3>
+                            <p class="text-blue-500 text-lg">Webster's High School</p>
+                        </div>
+                        <div class="mt-2 md:mt-0">
+                            <span class="bg-blue-500/20 text-blue-400 px-4 py-1 rounded-full">96%</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">KSEEB - 2014</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-neutral-700/20 rounded-lg p-6 animate__animated animate__fadeIn">
+                <div class="flex items-center mb-4">
+                    <svg class="w-6 h-6 text-blue-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <h4 class="text-lg font-semibold text-white">Educational Highlights</h4>
+                </div>
+                <ul class="space-y-2 text-gray-300">
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                        </svg>
+                        Consistent academic performance across all levels
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                        </svg>
+                        Specialized in Information Science Engineering
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-5 h-5 text-blue-500 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4"/>
+                        </svg>
+                        Strong foundation in computer science fundamentals
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="142e5394-0732-4bad-9cf3-259a7bec8d36" data-section-id="142e5394-0732-4bad-9cf3-259a7bec8d36">
+
+<htmlCode>
+<div id="root">
+    <section id="contact" class="py-20 bg-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate__animated animate__fadeIn">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-8 animate__animated animate__fadeInLeft">
+                    <div class="bg-neutral-900 rounded-lg p-6">
+                        <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-500/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-medium">Phone</h4>
+                                    <a href="tel:+919036132071" class="text-gray-400 hover:text-blue-500 transition-colors">+91 90361 32071</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-500/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-medium">Email</h4>
+                                    <a href="mailto:ajithbbhat@gmail.com" class="text-gray-400 hover:text-blue-500 transition-colors">ajithbbhat@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-blue-500/20 p-3 rounded-lg">
+                                    <svg class="w-6 h-6 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-medium">Location</h4>
+                                    <p class="text-gray-400">Bengaluru, Karnataka</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                            </div>
+                        </div>
+
+                        <div class="mt-8 flex space-x-4">
+                            <a href="https://www.linkedin.com/in/ajith-b-0b9b70156" target="_blank" rel="noopener noreferrer" class="bg-blue-500/20 p-3 rounded-lg hover:bg-blue-500/30 transition-colors">
+                                <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/ajithbbhat" target="_blank" rel="noopener noreferrer" class="bg-blue-500/20 p-3 rounded-lg hover:bg-blue-500/30 transition-colors">
+                                <svg class="w-6 h-6 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+</div>
+</htmlCode></element><element id="c0da8636-7a7d-44da-a2a4-5b83aeb162dd" data-section-id="c0da8636-7a7d-44da-a2a4-5b83aeb162dd">
+
+<htmlCode>
+<div id="root">
+  <section id="footer" class="bg-neutral-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        
+        <!-- Contact Info -->
         <div>
-          <h3>PROFESSIONAL EXPERIENCE</h3>
-          <ul>
-            <li>
-              HAPPIEST MINDS TECHNOLOGIES LIMITED, BENGALURU Project- Skan
-              Cohort management • Assisting in the development and maintenance
-              of web applications using Javascript and other web frameworks.
-            </li>
-            <li>
-              Participated in the design and implementation of REST APIs for
-              communication between the front-end and back-end systems.
-            </li>
-            <li>
-              Contributed to database design and optimisation for efficient data
-              storage and retrieval.
-            </li>
-            <li>
-              Collaborated with the front-end development team to ensure
-              seamless integration with the back-end.
+          <h3 class="font-bold text-xl mb-4">Contact</h3>
+          <ul class="space-y-2">
+            <li>Phone: +91 9036132071</li>
+            <li>Email: ajithbbhat@gmail.com</li>
+            <li class="text-sm">
+              Flat No. GF-002, Vikas Paradise,
+              <br/>3rd Main Road, 4th Cross,
+              <br/>Brindavana Layout, Padmanabhanagar,
+              <br/>BENGALURU, KARNATAKA 560061
             </li>
           </ul>
         </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="font-bold text-xl mb-4">Resume</h3>
+          <ul class="space-y-2">
+            <li><a href="/AjithBhat_Resume.pdf" download class="hover:text-blue-400">Download</a></li>
+            <li><a href="https://drive.google.com/file/d/1PJOAzzGbLXC-CDRVIIfjLCe1vJ_jVKmt/view?usp=sharing" target="_blank" class="hover:text-blue-400">Drive Link</a></li>
+          </ul>
+        </div>
+
+        <!-- Skills -->
+        <div>
+          <h3 class="font-bold text-xl mb-4">Core Skills</h3>
+          <ul class="space-y-2">
+            <li>JavaScript (ES6+)</li>
+            <li>Node.js & Express</li>
+            <li>React & Next.js</li>
+            <li>AWS Services</li>
+            <li>MongoDB & SQL</li>
+          </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div>
+          <h3 class="font-bold text-xl mb-4">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/in/ajith-b-0b9b70156" target="_blank" class="hover:text-blue-400">
+              <img src="https://www.moolfinance.com/_next/static/media/linkedin.71a1093d.svg" alt="LinkedIn" class="w-6 h-6"/>
+            </a>
+            <!-- <a href="https://ajithbbhat.github.io/devwithaj.github.io/" target="_blank" class="hover:text-blue-400">
+              <img src="https://www.moolfinance.com/_next/static/media/heart.2084fc92.svg" alt="Portfolio" class="w-6 h-6"/>
+            </a> -->
+          </div>
+        </div>
       </div>
-      <img src="img/ajith_pic.jpg" alt="Random picture" class="about-me__img" />
-    </section>
 
-    <!-- My Work -->
-    <section class="my-work" id="work">
-      <h2 class="section__title section__title--work">My work</h2>
-      <p class="section__subtitle section__subtitle">
-        A selection of my range of work
-      </p>
-      <div class="portfolio">
-        <!-- Portfolio item 02 -->
-        <a href="IOT.html" class="portfolio__item">
-          <img src="img/iot.jpg" alt="" class="portfolio__img" />
-        </a>
-
-        <!-- Portfolio item 03 -->
-        <a href="Ecomm.html" class="portfolio__item">
-          <img src="img/ecomm.jpg" alt="" class="portfolio__img" />
-        </a>
-        <!-- Portfolio item 04 -->
-        <a href="Natour.html" class="portfolio__item">
-          <img src="img/tour.jpg" alt="" class="portfolio__img" />
-        </a>
-        <!-- Portfolio item 05 -->
-        <a href="Reservation.html" class="portfolio__item">
-          <img src="img/reservation.jpg" alt="" class="portfolio__img" />
-        </a>
-        <!-- Portfolio item 06 -->
-        <a href="Skan.html" class="portfolio__item">
-          <img src="img/skan.jpg" alt="" class="portfolio__img" />
-
-          <!-- Portfolio item 01 -->
-          <a href="Dashboard.html" class="portfolio__item">
-            <img src="img/Dasboard.jpg" alt="" class="portfolio__img" />
-          </a>
-        </a>
+      <div class="border-t border-neutral-700 mt-8 pt-8 text-center">
+        <p class="text-sm text-neutral-400">© 2024 Ajith B. All rights reserved.</p>
       </div>
-    </section>
-    
-    <!-- certification -->
-    <section class="certification" id="certification">
-      <h2 class="section__title section__title--certificates">My Certifications</h2>
-      <a href="certifcate.html" class="btn">Certificates</a></section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <!-- replace with your own email address -->
-      <p><p>Copyright &copy; 2023. All Rights Reserved</p>
-        <a href="mailto:ajithbbhat@gmail.com" class="footer__link"
-          >ajithbbhat@gmail.com</a
-        >
-      </p>
-      <p>
-        <a href="doc/Ajith_Bhat_Resume.pdf" download="ajith_resume"
-          >Download Resume
-        </a>
-      </p>
-      <ul class="social-list">
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://codepen.io/ajithbbhat">
-            <i class="fab fa-codepen"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a
-            class="social-list__link"
-            href="https://www.linkedin.com/in/ajith-b-0b9b70156"
-          >
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a
-            class="social-list__link"
-            href="https://www.reddit.com/user/Unhappy_Wafer9236"
-          >
-            <i class="fab fa-reddit"></i>
-          </a>
-        </li>
-        <li class="social-list__item">
-          <a class="social-list__link" href="https://github.com/AjithBBhat">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-      </ul>
-    </footer>
-
-    <script src="js/index.js"></script>
-  </body>
-</html>
+    </div>
+  </section>
+</div>
+</htmlCode></element>
+            <div id="page_complete">
+            <script>
+                console.log('Page complete');
+            </script>
+            </body>
+            </html>
+          
